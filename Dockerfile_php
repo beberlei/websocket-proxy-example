@@ -1,0 +1,9 @@
+FROM php
+
+ADD . /code
+
+EXPOSE 80
+
+WORKDIR /code
+
+CMD php -S 0.0.0.0:80 -t /code

@@ -1,3 +1,7 @@
+<?php
+$serverParts = explode(':', $_SERVER['HTTP_HOST'], 2);
+$serverName = $serverParts[0];
+?>
 <html>
     <head>
         <title>Websockets</title>
@@ -11,7 +15,7 @@
         <h1 id="message"></h1>
 
         <script type="text/javascript" language="javascript">
-            var ws = new WebSocket("ws://localhost:9191/ws")
+            var ws = new WebSocket("ws://<?php echo $serverName; ?>:9191/ws")
             ws.onmessage = function (message) {
                 var event = JSON.parse(message.data)
 

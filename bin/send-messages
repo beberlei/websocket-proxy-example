@@ -1,0 +1,3 @@
+#!/bin/bash
+
+./bin/php-enter "php lorem_ipsum.php 2"

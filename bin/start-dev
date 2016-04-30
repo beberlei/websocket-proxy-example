@@ -1,0 +1,17 @@
+#!/bin/bash
+SKIP_BUILD=0
+
+while getopts ":s" opt; do
+  case $opt in
+    s)
+      SKIP_BUILD=1
+      ;;
+  esac
+done
+
+if [ "$SKIP_BUILD" = "0" ]; then
+    ./bin/build
+fi
+
+./bin/start
+./bin/send-messages

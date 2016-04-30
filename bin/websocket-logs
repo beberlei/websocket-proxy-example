@@ -1,0 +1,5 @@
+#!/bin/bash
+#
+# display the logs of the websocket's container
+#
+docker logs -f websocket

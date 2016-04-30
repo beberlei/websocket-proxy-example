@@ -1,0 +1,6 @@
+#!/bin/bash
+#
+# build the php docker image
+#
+
+docker build --file="Dockerfile_php" -t websocket-php .

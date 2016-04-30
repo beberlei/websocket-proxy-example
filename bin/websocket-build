@@ -1,0 +1,7 @@
+#!/bin/bash
+#
+# build the go docker image where the websocket server is running in
+#
+
+docker build -t websocket .
+
