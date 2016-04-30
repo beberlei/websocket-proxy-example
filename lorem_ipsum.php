@@ -7,7 +7,7 @@ $colors = ["green", "red", "blue", "pink", "yellow", "orange", "black", "cyan"];
 $count = 0;
 
 while (true) {
-    $fp = @stream_socket_client("udp://127.0.0.1:8081", $errno, $errstr, 1);
+    $fp = @stream_socket_client("udp://udp:9292", $errno, $errstr, 1);
     for ($userId = 1; $userId <= $counterUsers; $userId++) {
         $message = $words[$count % count($words)];
         $color = $colors[$count % count($colors)];

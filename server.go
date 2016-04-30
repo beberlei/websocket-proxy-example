@@ -10,8 +10,8 @@ import (
 )
 
 var maxId = 0
-var udpAddr string = "127.0.0.1:8081"
-var httpAddr string = ":8080"
+var udpAddr string = ":9292"
+var httpAddr string = ":9191"
 var clients            map[int]*Client
 var clientAdded        chan *Client
 var clientDisconnected chan *Client

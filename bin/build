@@ -1,0 +1,4 @@
+#!/bin/bash
+
+./bin/php-build
+./bin/websocket-build

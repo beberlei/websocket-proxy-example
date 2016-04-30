@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+# enter php container to send some messages for example
+#
+
+cmd=$1
+
+if [ -z "$cmd" ]; then
+    cmd=bash
+fi
+
+docker exec -ti websocket-php $cmd

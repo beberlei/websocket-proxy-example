@@ -1,6 +1,6 @@
 <?php
 
-$fp = @stream_socket_client("udp://127.0.0.1:8081", $errno, $errstr, 1);
+$fp = @stream_socket_client("udp://udp:9292", $errno, $errstr, 1);
 fwrite($fp, json_encode([
     'UserId' => (int)$argv[1],
     'Name' => 'Message',

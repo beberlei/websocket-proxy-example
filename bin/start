@@ -1,0 +1,19 @@
+#!/bin/bash
+
+docker rm -f websocket 2> /dev/null
+docker rm -f websocket-php 2> /dev/null
+
+docker run \
+    -d \
+    -p 9191:9191 \
+    --name=websocket \
+    websocket
+
+docker run \
+    -d \
+    -p 9090:80 \
+    --name=websocket-php \
+    --link websocket:udp \
+    -v $(pwd):/code \
+    websocket-php
+
